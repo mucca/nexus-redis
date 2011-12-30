@@ -18,7 +18,7 @@ class RedisModule(nexus.NexusModule):
                 continue
             try:
                 caches[netloc] = Redis(host=config.get('host'), port=config.get('port'),
-                                       pasword=conf.get('password'))
+                                       pasword=config.get('password'))
             except Exception, e:
                 self.logger.exception(e)
         return caches
